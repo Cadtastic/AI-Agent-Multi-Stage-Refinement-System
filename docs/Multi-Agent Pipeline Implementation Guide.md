@@ -61,6 +61,15 @@ This guide details the implementation of the **Multi-Agent Pipeline** within the
 User Input → Clarification Agent → Research Agent → Summarization Agent →
 Stylistic Agent → Validation Agent → Final Output
 ```
+```mermaid
+graph TD
+    A[User Input] --> B[Clarification Agent]
+    B --> C[Research Agent]
+    C --> D[Summarization Agent]
+    D --> E[Stylistic Agent]
+    E --> F[Validation Agent]
+    F --> G[Final Output]
+```
 
 ### **4.3 Inter-Agent Messaging**
 - Agents communicate asynchronously through an **Azure Service Bus**, chosen for its reliability and ability to handle large-scale distributed messaging compared to options like Event Grid or Kafka.
