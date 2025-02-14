@@ -26,3 +26,7 @@ This system enhances AI responses through iterative refinement, using latent rec
 13. **[AI Governance & Ethical Considerations Guide](./docs/AI%20Governance%20&%20Ethical%20Considerations%20Guide.md)** – Outlines policies to ensure ethical AI deployment and regulatory alignment.
 
 ---
+
+# Setup & Deployment
+
+14. **[Azure AI Setup & Configuration Guide](./docs/Azure%20AI%20Setup%20%26%20Configuration%20Guide.md)** – Outlines setup and deployment steps.
