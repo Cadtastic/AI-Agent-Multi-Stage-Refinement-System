@@ -36,6 +36,16 @@ The **Iterative Refinement Engine** is a core component of the Multi-Agent Pipel
 ```plaintext
 Initial Response → Confidence Scoring → Refinement Iteration → Validation Check → Final Output
 ```
+```mermaid
+graph TD
+    A[Initial Response] --> B[Confidence Scoring]
+    B --> C{Confidence above Threshold?}
+    C -- No --> D[Refinement Iteration]
+    D --> B
+    C -- Yes --> E[Validation Check]
+    E --> F[Final Output]
+```
+
 - The engine first generates an **initial response**.
 - Confidence scoring evaluates the quality of the response based on predefined metrics such as coherence, factual accuracy, and relevance to the original query, with different weightings applied based on the query's complexity and domain. These weightings are dynamically adjusted using a combination of predefined rules, machine learning models, and user feedback.
 - If confidence is below the **acceptable threshold**, the response undergoes additional **refinement iterations**.
