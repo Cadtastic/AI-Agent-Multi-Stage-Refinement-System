@@ -59,7 +59,8 @@ This guide details the implementation of the **Multi-Agent Pipeline** within the
 ### **4.2 Execution Flow**
 ```plaintext
 User Input → Clarification Agent → Research Agent → Summarization Agent →
-Stylistic Agent → Validation Agent → Final Output
+Stylistic Agent → Validation Agent → Validation Successful? → Yes → Final Output
+                                                               No → Fallback Mechanism/User Intervention
 ```
 ```mermaid
 graph TD
@@ -68,7 +69,9 @@ graph TD
     C --> D[Summarization Agent]
     D --> E[Stylistic Agent]
     E --> F[Validation Agent]
-    F --> G[Final Output]
+    F --> G{Validation Successful?}
+    G -- Yes --> H[Final Output]
+    G -- No --> I[Fallback Mechanism/User Intervention]
 ```
 
 ### **4.3 Inter-Agent Messaging**
